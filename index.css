@@ -1,63 +1,68 @@
 body {
-    background-color: black;
-    font-family: "Open Sans";
-  }
-  
-  h3 {
-    margin: 0;
-  }
-  
-  .accordion__wrapper {
-    max-width: 720px;
-    min-width: 200px;
-    margin: 10px;
-  }
-  
-  .accordion__label {
-    position: relative;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 24px;
-    background-color: white;
-    z-index: 2;
-    cursor: pointer;
-  }
-  
-  .accordion__description {
-    color: #3c3c43;
-    background: white;
-    margin: 0;
-    z-index: 1;
-    height: 0;
-    padding: 0 24px;
-    visibility: hidden;
-    overflow-y: auto;
-    transition: visibility 0.2s, height 0.2s;
-  }
-  
-  .accordion__title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .accordion__title::before {
-    content: "+";
-    color: black;
-    position: absolute;
-    font-weight: 600;
-    right: 30px;
-    font-size: 24px;
-    transition: 0.1s;
-  }
-  
-  .accordion__active .accordion__description {
-    height: 68px;
-    visibility: unset;
-    transition: visibility 0.2s, height 0.2s;
-  }
-  
-  .accordion__active .accordion__title::before {
-    transform: rotate(45deg);
-    transition: 0.1s;
-  }
-  
+  background-color: black;
+  font-family: "Open Sans";
+}
+
+h3 {
+  margin: 0;
+}
+
+.accordion__wrapper {
+  cursor: pointer;
+  max-width: 720px;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.accordion__label {
+  pointer-events: none;
+  position: relative;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 24px;
+  background-color: white;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.accordion__description {
+  pointer-events: none;
+  color: #3c3c43;
+  font-size: 16px;
+  background: white;
+  margin: 0;
+  z-index: 1;
+  height: 0;
+  padding: 0 24px;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: visibility 0.2s, height 0.2s;
+}
+
+.accordion__title {
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.accordion__title::before {
+  pointer-events: none;
+  content: "+";
+  color: black;
+  position: absolute;
+  font-weight: 600;
+  right: 30px;
+  font-size: 24px;
+  transition: 0.1s;
+}
+
+.accordion__active .accordion__description {
+  height: 68px;
+  visibility: unset;
+  transition: visibility 0.2s, height 0.2s;
+}
+
+.accordion__active .accordion__title::before {
+  transform: rotate(45deg);
+  transition: 0.1s;
+}
