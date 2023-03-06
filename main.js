@@ -9,7 +9,7 @@
   function handleClick(id) {
     const a = document.getElementsByClassName("accordion__wrapper");
     for (let i = 0; i < a.length; i++) {
-      if (i === id - 1) {
+      if (i === id) {
         a[i].classList.toggle("accordion__active");
       } else a[i].classList.remove("accordion__active");
     }
@@ -23,7 +23,7 @@
             <div class="accordion__wrapper">
               <div 
                 class="accordion__label" 
-                onclick="handleClick(${index + 1})"
+                onclick="handleClick(${index})"
               >
                 <div class="accordion__title">${item.title}</div>
               </div>
